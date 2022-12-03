@@ -36,7 +36,7 @@
         android:id="@+id/textView"
         android:layout_width="233dp"
         android:layout_height="41dp"
-        android:text="Unit Coverter App"
+        android:text="Power Conversion"
         android:textAlignment="center"
         android:textColor="@color/purple_500"
         android:textSize="24sp"
