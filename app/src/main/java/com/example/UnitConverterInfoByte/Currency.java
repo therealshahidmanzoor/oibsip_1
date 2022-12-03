@@ -60,12 +60,12 @@ public class Currency extends AppCompatActivity {
                 else {
                     double num=Double.parseDouble(units_currency.getText().toString());
                     if (conv_sel_currency==1) {
-                        res_currency= BigDecimal.valueOf(num/100);
+                        res_currency= BigDecimal.valueOf(num*0.012);
                         calculated_result=String.valueOf(res_currency)+" Dollar";
                         result_currency.setText(calculated_result);
                     }
                     if (conv_sel_currency==2) {
-                        res_currency= BigDecimal.valueOf(num/1000);
+                        res_currency= BigDecimal.valueOf(num*81.42);
                         calculated_result=String.valueOf(res_currency)+" Rupees";
                         result_currency.setText(calculated_result);
                     }
