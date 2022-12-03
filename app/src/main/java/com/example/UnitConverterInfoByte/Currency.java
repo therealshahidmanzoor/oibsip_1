@@ -28,6 +28,7 @@ public class Currency extends AppCompatActivity {
     Button button_currency;
     int conv_sel_currency;
    BigDecimal res_currency;
+    String calculated_result;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,15 +61,28 @@ public class Currency extends AppCompatActivity {
                     double num=Double.parseDouble(units_currency.getText().toString());
                     if (conv_sel_currency==1) {
                         res_currency= BigDecimal.valueOf(num/100);
+                        calculated_result=String.valueOf(res_currency)+" Dollar";
+                        result_currency.setText(calculated_result);
                     }
                     if (conv_sel_currency==2) {
                         res_currency= BigDecimal.valueOf(num/1000);
+                        calculated_result=String.valueOf(res_currency)+" Rupees";
+                        result_currency.setText(calculated_result);
                     }
                     if (conv_sel_currency==3) {
                         res_currency= BigDecimal.valueOf(num/(80.5));
+                        calculated_result=String.valueOf(res_currency)+" Rupees";
+                        result_currency.setText(calculated_result);
                     }
                     if (conv_sel_currency==4) {
                         res_currency= BigDecimal.valueOf(num*(0.45359));
+                        calculated_result=String.valueOf(res_currency)+" Dinar";
+                        result_currency.setText(calculated_result);
+                    }
+                    if(conv_sel_currency==5){
+                        res_currency= BigDecimal.valueOf(num*(0.04));
+                        calculated_result=String.valueOf(res_currency)+" Riyal";
+                        result_currency.setText(calculated_result);
                     }
 
                     if(conv_sel_currency==0) {
